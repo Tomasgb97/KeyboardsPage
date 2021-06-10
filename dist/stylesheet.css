@@ -7,9 +7,22 @@
     src: url(../fonts/HBM\ Razed\ Bold\ \(personal\ use\ only\).ttf);
 }
 
+@keyframes slide {
+    
+    0%{
+        width: 0px;
+    }
+
+    100%{
+
+        width: 220px;
+    }
+}
+
 body{
     margin: 0px;
     background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
 }
 #headersection{
 
@@ -70,6 +83,7 @@ body{
     flex: 0.3;
     justify-content: space-evenly;
     align-items: center;
+    user-select: none;
 }
 
 #rightheader img{
@@ -95,3 +109,65 @@ body{
     font-size: 100px;
     user-select: none;
 }
+
+#menunav{
+    position: absolute;
+    background-color: rgb(7, 7, 7);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    left: -220px;
+    width: 220px;
+    height: 815px;
+    padding-top: 50px;
+    border-right: 1px solid green;
+   
+}
+.menushow{
+
+    transform: translateX(100%);
+    transition: transform ease-out 0.3s;
+    
+}
+.menuhidd{
+
+    transform: translateX(-100%);
+    transition: transform ease-out 0.3s;
+
+}
+#navlogo{
+
+    width: 40%;
+    align-self: center;
+}
+#navlogo:hover{
+
+    transform: rotate(180deg);
+    transition: transform ease 3s;
+}
+#menucontainer{
+    background-color: rgb(7, 7, 7);
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: start;
+    color: white;
+}
+
+#menucontainer p{
+
+    border-top: 1px solid rgb(45, 255, 3);
+    font-family: madeleina;
+    text-align: center;
+
+}
+#mousenav{
+
+    width: 60%;
+    align-self: center;
+    filter: drop-shadow(0 0 0.75rem rgb(226, 230, 225));
+}
+

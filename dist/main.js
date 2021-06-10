@@ -1,0 +1,1 @@
+document.getElementById("menubutt").addEventListener("click",(function(){const e=document.getElementById("menunav");e.classList.toggle("menushow"),e.classList.toggle("menuhidd")}));
