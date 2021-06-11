@@ -37,7 +37,8 @@ body{
     z-index: -1;
 }
 #headersection{
-
+    position: fixed;
+    z-index: 2;
     background-color: rgba(34, 32, 32, 0.829);
     height: 100px;
     width: 100%;
@@ -141,7 +142,7 @@ body{
 
 #slidercontainer{
     align-self: center;
-    background-color: white;
+    background-color: rgba(75, 238, 10, 0.288);
     width: 30%;
     height: 300px;
     box-shadow: 2px 1px 20px 10px rgba(3, 99, 3, 0.562);
@@ -173,6 +174,11 @@ body{
     align-content: center;
     justify-content: center;
 }
+#next img, #prev img{
+    align-self: center;
+    width: 20px;
+    height: 20px;
+}
 #next:hover, #prev:hover{
 
     transform: scale(1.1);
@@ -181,7 +187,7 @@ body{
 .slide{
     width: 100%;
     max-height: 300px;
-    animation: appear 3s;
+    animation: appear 1s;
     border-radius: 3px;
 }
 .slide img{
@@ -193,11 +199,12 @@ body{
 
 
 #menunav{
-    position: absolute;
+    position: fixed;
     background-color: rgb(7, 7, 7);
     display: flex;
     flex-direction: column;
     align-content: center;
+    top: 112px;
     left: -220px;
     width: 220px;
     height: 815px;
@@ -252,5 +259,94 @@ body{
     align-self: center;
     filter: drop-shadow(0 0 0.75rem rgb(226, 230, 225));
 }
+
+#footersection{
+
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid rgb(114, 114, 114);
+    margin-top: 100px;
+    height: 200px;
+    width: 100%;
+    background-color: #0c0c0c;;
+}
+
+#infocontainer{
+    align-self: center;
+    display: flex;
+    width: 70%;
+    margin-top: 25px;
+    height: 150px;
+}
+.info{
+
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+.info::after{
+
+    content: "";
+    width: 2px;
+    height: 126px;
+    background-color: rgb(114, 114, 114);
+    position: absolute;
+    left: 232px;
+
+}
+
+.footerlist{
+
+    list-style: none;
+    padding: 0;
+}
+
+.footerlabel{
+
+    font-weight: 900;
+    font-family: madeleina;
+}
+.listtext{
+    cursor: pointer;
+    user-select: none;
+    font-weight: lighter;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+.listtext:hover{
+
+    color:  greenyellow;
+}
+#forgamers{
+
+    font-family: madeleina;
+    color: greenyellow;
+
+}
+#iconscontain{
+
+    display: flex;
+    width: 80%;
+    justify-content: flex-start;
+}
+
+.socialicons{
+
+    cursor: pointer;
+    width: 15%;
+}
+#legalcontainer{
+
+    display: flex;
+    justify-content: center;
+}
+#copyright{
+    align-self: center;
+    color: #6d7c7d75;;
+}
+
 
 
