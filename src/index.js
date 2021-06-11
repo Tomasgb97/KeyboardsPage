@@ -33,9 +33,41 @@ const nextSlide = () => {
     })
     console.log(actual)
     document.getElementById(`${actual + 1}`).setAttribute('style', 'display: block');
+
 }
 
+
+
+
+const previousSlide = () => {
+
+    const images = document.querySelectorAll('.slide');
+    let actual;
+
+    images.forEach(function(one){
+
+       const attr = one.getAttribute('style');
+       if(attr == 'display: block'){
+
+        const number = one.getAttribute('id');
+        if(number == 1){
+            actual = 5;
+        }else{
+        actual = parseInt(number);}
+       }
+
+       one.setAttribute('style', 'display: none');
+    })
+    console.log(actual)
+    document.getElementById(`${actual - 1}`).setAttribute('style', 'display: block');
+}
+
+
+
+
 nextButton.addEventListener('click', nextSlide);
+
+prevButton.addEventListener('click', previousSlide)
 
 function runner() {
     nextSlide();
