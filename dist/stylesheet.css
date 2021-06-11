@@ -7,15 +7,15 @@
     src: url(../fonts/HBM\ Razed\ Bold\ \(personal\ use\ only\).ttf);
 }
 
-@keyframes slide {
+@keyframes appear {
     
     0%{
-        width: 0px;
+        opacity: 0.5;
     }
 
     100%{
 
-        width: 220px;
+        opacity: 1;
     }
 }
 
@@ -96,19 +96,88 @@ body{
 
     width: 15%;
 }
+
+#maincontainer{
+    width: 100%;
+    height: 860px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
 #maintext{
     display: flex;
     flex-direction: column;
     margin-top: 100px;
     font-family: razed;
     align-items: center;
-    color: green;
+    color: rgb(0, 255, 0);
+    animation: appear ease-in 6s;
 }
 #maintext h1{
 
     font-size: 100px;
     user-select: none;
 }
+
+#contwithbuttons{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#slidercontainer{
+    align-self: center;
+    background-color: white;
+    width: 30%;
+    height: 300px;
+    box-shadow: 2px 1px 20px 10px rgba(3, 99, 3, 0.562);
+    border-radius: 5px;
+}
+#next{
+
+    background-color: rgba(104, 101, 101, 0.61);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    top: 740px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#prev{
+    background-color: rgba(104, 101, 101, 0.61);
+    position: absolute;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    top: 740px;
+    right: 35%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#next:hover, #prev:hover{
+
+    transform: scale(1.1);
+    transition: transform ease 0.3s;
+}
+.slide{
+    width: 100%;
+    max-height: 300px;
+    animation: appear 1s;
+    border-radius: 3px;
+}
+.slide img{
+
+    max-height: 300px;
+    width: 100%;
+    border-radius: 5px;
+}
+
 
 #menunav{
     position: absolute;
@@ -170,4 +239,5 @@ body{
     align-self: center;
     filter: drop-shadow(0 0 0.75rem rgb(226, 230, 225));
 }
+
 
