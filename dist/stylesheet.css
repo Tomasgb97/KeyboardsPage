@@ -224,6 +224,7 @@ body{
     display: flex;
     flex-direction: column;
     align-content: center;
+    font-family: system-ui;
 }
 
 #notebooktext h2{
