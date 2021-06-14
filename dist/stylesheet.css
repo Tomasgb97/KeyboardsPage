@@ -28,7 +28,10 @@
      }
     
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 body{
     margin: 0px;
     background-color: rgb(0, 0, 0);
@@ -65,6 +68,10 @@ body{
     position: relative;
     cursor: pointer;
 }
+.text:hover{
+
+    color: green;
+}
 
 .text::before{
 
@@ -78,10 +85,12 @@ body{
     transform: scale(0,1);
     transition:  transform 0.3s ease;
     box-shadow: 0px 5px 10px 2px rgba(3, 99, 3, 0.562);
+    
 }
 .text:hover::before{
 
     transform: scale(1, 1);
+    
     
 }
 .headercontent{
@@ -197,6 +206,130 @@ body{
     border-radius: 5px;
 }
 
+#productssection{
+    width: 100%;
+    height: 600px;
+    border-top: 1px solid grey;
+    margin-top: 90px;
+}
+
+#product1{
+    
+    display: flex;
+}
+
+#notebooktext{
+    color: white;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#notebooktext h2{
+
+    font-family: madeleina;
+    font-size: 60px;
+    color: greenyellow;
+
+}
+
+#notelist li{
+
+    margin-top: 55px;
+
+}
+
+.buybutton{
+
+    background: black;
+    color: rgba(255, 255, 255, 0.568);
+    font-weight: 900;
+    width: 35%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.buybutton::after{
+
+    content: ">";
+    color: greenyellow;
+    margin-left: 10%;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.buybutton:hover{
+
+    transform: scale(1.1);
+    transition: transform ease-out 1s;
+}
+
+.buybutton:hover::after{
+    content: ">";
+    margin-left: 20%;
+    font-weight: lighter;
+    transform:scale(2);
+    transition: all ease-out 1s;
+    
+}
+
+#notebuy{
+    align-self: flex-end;
+    font-size: 18px;
+}
+
+#notebookwrapper{
+    margin-top: 50px;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-left: 50%;
+    border-radius: 30px;
+    padding: 10px;
+    border: 1px solid rgba(247, 3, 247, 0.26);
+    box-shadow: 2px 1px 20px 10px rgba(19, 5, 209, 0.322);
+}
+
+#notebookwrapper:hover #notebookbackground{
+
+    filter: none;
+    transition: filter ease 0.4s;
+}
+
+#notebookwrapper h2{
+
+    font-family: sans-serif;
+    color: rgb(255 255 255);
+    filter: contrast(70%);
+    text-align: center;
+}
+
+#notebookbackground{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    background-image: url(../images/notebookbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    border-radius: 25px;
+    transition: filter ease-out 1s;
+}
+
+#notimgwrapper img {
+
+    filter: drop-shadow(2px 4px 6px purple);
+    margin-left: 20px;
+}
+
+
+
 
 #menunav{
     position: fixed;
@@ -205,7 +338,7 @@ body{
     flex-direction: column;
     align-content: center;
     top: 112px;
-    left: -220px;
+    left: -221px;
     width: 220px;
     height: 815px;
     padding-top: 50px;
@@ -236,6 +369,7 @@ body{
 }
 #menucontainer{
     background-color: rgb(7, 7, 7);
+    margin-top: 10px;
     width: 100%;
     height: 400px;
     position: relative;
