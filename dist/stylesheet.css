@@ -126,6 +126,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    user-select: none;
 }
 #maintext{
     display: flex;
@@ -142,45 +143,47 @@ body{
     user-select: none;
 }
 
+#fullslider{
+
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    align-self: center;
+}
+
 #contwithbuttons{
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
+    flex-shrink: 1;
 }
 
 #slidercontainer{
     align-self: center;
     background-color: rgba(75, 238, 10, 0.288);
-    width: 30%;
-    height: 300px;
     box-shadow: 2px 1px 20px 10px rgba(3, 99, 3, 0.562);
     border-radius: 5px;
+    width: 100%;
 }
 #next{
 
-    background-color: rgba(104, 101, 101, 0.61);
-    position: absolute;
+    background-color: rgba(104, 101, 101, 0.986);
     width: 50px;
     height: 50px;
     border-radius: 10px;
-    top: 740px;
-    left: 32%;
     display: flex;
-    align-content: center;
+    align-self: center;
     justify-content: center;
 }
 #prev{
-    background-color: rgba(104, 101, 101, 0.61);
-    position: absolute;
-    position: absolute;
+    background-color: rgb(104, 101, 101);
     width: 50px;
     height: 50px;
     border-radius: 10px;
-    top: 740px;
-    right: 32%;
     display: flex;
-    align-content: center;
+    align-self: center;
     justify-content: center;
 }
 #next img, #prev img{
@@ -208,7 +211,6 @@ body{
 
 #productssection{
     width: 100%;
-    height: 600px;
     border-top: 1px solid grey;
     margin-top: 90px;
 }
@@ -218,7 +220,7 @@ body{
     display: flex;
 }
 
-#notebooktext{
+.producttext{
     color: white;
     margin-left: 15%;
     display: flex;
@@ -227,7 +229,7 @@ body{
     font-family: system-ui;
 }
 
-#notebooktext h2{
+.producttext h2{
 
     font-family: madeleina;
     font-size: 60px;
@@ -235,7 +237,7 @@ body{
 
 }
 
-#notelist li{
+.productlist li{
 
     margin-top: 55px;
 
@@ -265,10 +267,12 @@ body{
 
     transform: scale(1.1);
     transition: transform ease-out 1s;
+    background-color: #7ac309;;
 }
 
 .buybutton:hover::after{
-    content: ">";
+    content: ">>";
+    color: black;
     margin-left: 20%;
     font-weight: lighter;
     transform:scale(2);
@@ -327,6 +331,72 @@ body{
 
     filter: drop-shadow(2px 4px 6px purple);
     margin-left: 20px;
+}
+
+#product2{
+    display: flex;
+    margin-top: 250px;
+}
+
+#mouseswrapper{
+
+        margin-top: 50px;
+        margin-left: 10%;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 200px;
+        border-radius: 30px;
+        padding: 10px;
+        border: 1px solid rgba(223, 247, 3, 0.26);
+        box-shadow: 2px 1px 20px 10px rgba(206, 209, 5, 0.322);
+}
+
+#mouseswrapper:hover #mousesbackground{
+
+    filter: none;
+    transition: filter ease 0.4s;
+}
+
+#mouseswrapper h2{
+
+    font-family: sans-serif;
+    color: rgb(255 255 255);
+    filter: contrast(70%);
+    text-align: center;
+}
+
+#mousesbackground{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    background-image: url(../images/mousesbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    border-radius: 25px;
+    transition: filter ease-out 1s;
+}
+#mousimgwrapper img {
+
+    filter: drop-shadow(2px 4px 6px rgb(206, 209, 4));
+    margin-left: 20px;
+}
+
+#nagatext{
+
+    flex: 1;
+}
+
+#mousesbuy{
+
+    font-size: 18px;
+    width: 23%;
+    margin-left: 58%;
+
 }
 
 

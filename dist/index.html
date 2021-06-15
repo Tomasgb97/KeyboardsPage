@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Razer</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
     <section id="headersection">
         <header>
@@ -15,7 +17,9 @@
                 <div id="menubutt" class="text">Menu</div>
             </div>
             <div class="headercontent">
-                <a href="#products"><div class="text">PRODUCTS</div></a>
+                <a href="#products">
+                    <div class="text">PRODUCTS</div>
+                </a>
                 <div class="text">ABOUT US</div>
                 <div class="text">CONTACT US</div>
             </div>
@@ -50,48 +54,50 @@
             <h1>RAZER</h1>
             <h2>Let's change the game...</h2>
         </div>
-    
-        <div id="next">
-            <img src="../images/icons/next.png" alt="" style="transform: rotate(180deg);">
-        </div>
-        <div id="prev">
-            <img src="../images/icons/next.png" alt="">
-        </div>
-        
-        <div id="contwithbuttons">
-            <div id="slidercontainer">
-                
-                <div id="1" class="slide" style="display: block">
-                    <img src="../images/img1.jpg" alt="">
-                </div>
-            
-                <div id="2" class="slide" style="display: none;">
-                    <img src="../images/img2.jpg" alt="">
-                </div>
 
-                <div id="3" class="slide" style="display: none;">
-                    <img src="../images/img3.jpg" alt="">
-                </div>
 
-                <div id="4" class="slide" style="display: none;">
-                    <img src="../images/img4.jpg" alt="">
-                </div>
+        <div id="fullslider">
+            <div id="next">
+                <img src="../images/icons/next.png" alt="" style="transform: rotate(180deg);">
+            </div>
+            <div id="contwithbuttons">
+                <div id="slidercontainer">
 
-                <div id="5" class="slide" style="display: none;">
-                    <img src="../images/img5.jpg" alt="">
+                    <div id="1" class="slide" style="display: block">
+                        <img src="../images/img1.jpg" alt="">
+                    </div>
+
+                    <div id="2" class="slide" style="display: none;">
+                        <img src="../images/img2.jpg" alt="">
+                    </div>
+
+                    <div id="3" class="slide" style="display: none;">
+                        <img src="../images/img3.jpg" alt="">
+                    </div>
+
+                    <div id="4" class="slide" style="display: none;">
+                        <img src="../images/img4.jpg" alt="">
+                    </div>
+
+                    <div id="5" class="slide" style="display: none;">
+                        <img src="../images/img5.jpg" alt="">
+                    </div>
                 </div>
+            </div>
+            <div id="prev">
+                <img src="../images/icons/next.png" alt="">
             </div>
         </div>
     </section>
     <div id="products"></div>
     <section id="productssection">
         <div id="product1">
-            <div id="notebooktext">
+            <div class="producttext">
                 <h2>CHARGED TO WIN</h2>
                 <span> Equipped with the best.<br>
                     With the 30XX series of Nvidia take your game to the next level.
                 </span>
-                <ul id="notelist">
+                <ul class="productlist">
                     <li>Faster Frames. More Speed</li>
                     <li>NVIDIA® GeForce RTX™ 30xx Series</li>
                     <li>Chroma RGB</li>
@@ -109,51 +115,77 @@
                 </div>
             </div>
         </div>
+
+            <div id="product2">
+                <div id="mousescontainer">
+                    <div id="mouseswrapper">
+                        <div id="mousesbackground"></div>
+                        <div id="mousimgwrapper">
+                            <img src="../images/mouses.png" alt="mouses">
+                        </div>
+                        <h2>Razer Naga</h2>
+                    </div>
+                </div>
+                <div id="nagatext" class="producttext">
+                    <h2>THE NAGA FAMILY</h2>
+                    <span> The best choice in your hand<br>
+                        Each Naga has something waiting for you.
+                    </span>
+                    <ul class="productlist">
+                        <li>12 Button Thumb Grid</li>
+                        <li>Ergonomic Design</li>
+                        <li>Up to 5 Different Models</li>
+                        <li>Premium Competition Quality</li>
+                    </ul>
+                    <button id="mousesbuy" class="buybutton">BUY NOW</button>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="footersection">
-        <div id="infocontainer"> 
+        <div id="infocontainer">
             <div class="info">
                 <label class="footerlabel" for=""> Shop</label>
-                    <ul class="footerlist">
-                        <li class="listtext"> RazerStores</li>
-                        <li class="listtext">Store locator</li>
-                        <li class="listtext">Purchase Programs</li>
-                        <li class="listtext">Exclusives</li>
-                        <li class="listtext">Newsletter</li>
-                    </ul>
+                <ul class="footerlist">
+                    <li class="listtext"> RazerStores</li>
+                    <li class="listtext">Store locator</li>
+                    <li class="listtext">Purchase Programs</li>
+                    <li class="listtext">Exclusives</li>
+                    <li class="listtext">Newsletter</li>
+                </ul>
 
             </div>
             <div class="info">
                 <label class="footerlabel" for="">Explore</label>
-                    <ul class="footerlist">
-                        <li class="listtext">Technology </li>
-                        <li class="listtext">Chroma RGB</li>
-                        <li class="listtext">Concepts</li>
-                        <li class="listtext">Esports</li>
-                        <li class="listtext">Collabs</li>
-                    </ul>
+                <ul class="footerlist">
+                    <li class="listtext">Technology </li>
+                    <li class="listtext">Chroma RGB</li>
+                    <li class="listtext">Concepts</li>
+                    <li class="listtext">Esports</li>
+                    <li class="listtext">Collabs</li>
+                </ul>
 
             </div>
             <div class="info">
                 <label class="footerlabel" for=""> Support</label>
-                    <ul class="footerlist">
-                        <li class="listtext">Get Help </li>
-                        <li class="listtext"> Registration & Warranty</li>
-                        <li class="listtext">Online Store</li>
-                        <li class="listtext">RazerCare</li>
-                        <li class="listtext">Manage Razer ID</li>
-                    </ul>
+                <ul class="footerlist">
+                    <li class="listtext">Get Help </li>
+                    <li class="listtext"> Registration & Warranty</li>
+                    <li class="listtext">Online Store</li>
+                    <li class="listtext">RazerCare</li>
+                    <li class="listtext">Manage Razer ID</li>
+                </ul>
 
             </div>
             <div class="info">
                 <label class="footerlabel" for="">Company</label>
-                    <ul class="footerlist">
-                        <li class="listtext">About us </li>
-                        <li class="listtext">Careers</li>
-                        <li class="listtext">Press Room</li>
-                        <li class="listtext">Investor Relations</li>
-                        <li class="listtext">Contact Us</li>
-                    </ul>
+                <ul class="footerlist">
+                    <li class="listtext">About us </li>
+                    <li class="listtext">Careers</li>
+                    <li class="listtext">Press Room</li>
+                    <li class="listtext">Investor Relations</li>
+                    <li class="listtext">Contact Us</li>
+                </ul>
             </div>
             <div class="info">
                 <span id="forgamers">FOR GAMERS. BY GAMERS.™</span>
@@ -170,4 +202,5 @@
     </section>
     <script src="main.js"></script>
 </body>
+
 </html>
